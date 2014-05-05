@@ -57,6 +57,7 @@
 		2751E5CC190A7CD100499EE3 /* HiHuColleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2751E5CB190A7CD100499EE3 /* HiHuColleView.m */; };
 		2751E5CE190A7CEA00499EE3 /* HiHuColleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2751E5CD190A7CEA00499EE3 /* HiHuColleView.xib */; };
 		27A3FE7F19176B4A00D0312B /* WeekSignin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A3FE7E19176B4A00D0312B /* WeekSignin.xib */; };
+		27A3FE811917861B00D0312B /* signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A3FE801917861B00D0312B /* signin@2x.png */; };
 		27D23E1D1910DC920077AAC8 /* DetailPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23E1C1910DC920077AAC8 /* DetailPictureViewController.m */; };
 		27D23E221910F0E50077AAC8 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23E211910F0E50077AAC8 /* iCarousel.m */; };
 		27FFC78D190E3A5300A47C42 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FFC78C190E3A5300A47C42 /* HelpViewController.m */; };
@@ -143,6 +144,7 @@
 		2751E5CB190A7CD100499EE3 /* HiHuColleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiHuColleView.m; sourceTree = "<group>"; };
 		2751E5CD190A7CEA00499EE3 /* HiHuColleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HiHuColleView.xib; sourceTree = "<group>"; };
 		27A3FE7E19176B4A00D0312B /* WeekSignin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekSignin.xib; sourceTree = "<group>"; };
+		27A3FE801917861B00D0312B /* signin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin@2x.png"; sourceTree = "<group>"; };
 		27D23E1B1910DC920077AAC8 /* DetailPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPictureViewController.h; sourceTree = "<group>"; };
 		27D23E1C1910DC920077AAC8 /* DetailPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPictureViewController.m; sourceTree = "<group>"; };
 		27D23E201910F0E50077AAC8 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				2751E5B9190A162F00499EE3 /* dingshi_h@2x.png */,
 				274ED251191626F700BA5235 /* play@2x.png */,
 				274ED252191626F700BA5235 /* preView@2x.png */,
+				27A3FE801917861B00D0312B /* signin@2x.png */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				2751E5A61909F43700499EE3 /* QQ20140425-4@2x.png in Resources */,
 				2751E5A31909F43700499EE3 /* QQ20140425-1@2x.png in Resources */,
 				273E20761908FA8E00475A0D /* QQ20140424-2@2x.png in Resources */,
+				27A3FE811917861B00D0312B /* signin@2x.png in Resources */,
 				27FFC79F190E656D00A47C42 /* baby@2x.png in Resources */,
 				2751E5A51909F43700499EE3 /* QQ20140425-3@2x.png in Resources */,
 				274ED253191626F700BA5235 /* play@2x.png in Resources */,

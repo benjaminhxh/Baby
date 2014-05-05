@@ -103,6 +103,10 @@
     self.timeLabel.enabled = NO;
     [pulldownView addSubview:self.timeLabel];
     
+    UIImageView *imageSignView = [[UIImageView alloc] initWithFrame:CGRectMake(30, 160, 260, 40)];
+    imageSignView.image = [UIImage imageNamed:@"signin"];
+    [pulldownView addSubview:imageSignView];
+    
     UITableView *signinView = [[UITableView alloc] initWithFrame:CGRectMake(30, 200, 260, 210) style:UITableViewStylePlain];
     signinView.delegate = self;
     signinView.dataSource = self;
