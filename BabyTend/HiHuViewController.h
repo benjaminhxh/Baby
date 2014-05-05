@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SliderViewController.h"
 
 @interface HiHuViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *teacherName;
+@property (weak, nonatomic) IBOutlet UILabel *titleName;
 
+@property (strong, nonatomic) UILabel *titleLable;
+@property (strong, nonatomic) UIButton *signIn;
+@property (strong, nonatomic) UIButton *babyName;
+@property (strong, nonatomic) UIButton *timeLabel;
+@property (strong, nonatomic) UIButton *health;
+
+@property (weak, nonatomic) IBOutlet UILabel *telephoneNumber;
 @end

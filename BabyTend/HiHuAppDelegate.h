@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SliderViewController.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
 
 @interface HiHuAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
++(HiHuAppDelegate*)instance;
 
 @end
