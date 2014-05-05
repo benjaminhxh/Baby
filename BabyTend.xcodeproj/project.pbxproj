@@ -56,7 +56,6 @@
 		2751E5C7190A722800499EE3 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2751E5C6190A722800499EE3 /* CollectViewController.m */; };
 		2751E5CC190A7CD100499EE3 /* HiHuColleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2751E5CB190A7CD100499EE3 /* HiHuColleView.m */; };
 		2751E5CE190A7CEA00499EE3 /* HiHuColleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2751E5CD190A7CEA00499EE3 /* HiHuColleView.xib */; };
-		27A3FE7F19176B4A00D0312B /* WeekSignin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A3FE7E19176B4A00D0312B /* WeekSignin.xib */; };
 		27A3FE811917861B00D0312B /* signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A3FE801917861B00D0312B /* signin@2x.png */; };
 		27D23E1D1910DC920077AAC8 /* DetailPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23E1C1910DC920077AAC8 /* DetailPictureViewController.m */; };
 		27D23E221910F0E50077AAC8 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23E211910F0E50077AAC8 /* iCarousel.m */; };
@@ -143,7 +142,6 @@
 		2751E5CA190A7CD100499EE3 /* HiHuColleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiHuColleView.h; sourceTree = "<group>"; };
 		2751E5CB190A7CD100499EE3 /* HiHuColleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiHuColleView.m; sourceTree = "<group>"; };
 		2751E5CD190A7CEA00499EE3 /* HiHuColleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HiHuColleView.xib; sourceTree = "<group>"; };
-		27A3FE7E19176B4A00D0312B /* WeekSignin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekSignin.xib; sourceTree = "<group>"; };
 		27A3FE801917861B00D0312B /* signin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin@2x.png"; sourceTree = "<group>"; };
 		27D23E1B1910DC920077AAC8 /* DetailPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPictureViewController.h; sourceTree = "<group>"; };
 		27D23E1C1910DC920077AAC8 /* DetailPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPictureViewController.m; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 				273E207B190903E800475A0D /* myBaby.xib */,
 				273E20931909415E00475A0D /* telephoneCell.xib */,
 				2751E5BF190A4FB800499EE3 /* tribuneCell.xib */,
-				27A3FE7E19176B4A00D0312B /* WeekSignin.xib */,
 				273E20461908E60200475A0D /* Images.xcassets */,
 				273E20321908E60200475A0D /* Supporting Files */,
 			);
@@ -442,7 +439,6 @@
 				2751E5B2190A0B1200499EE3 /* back@2x.png in Resources */,
 				2751E5C4190A536800499EE3 /* button@2x.png in Resources */,
 				273E20791908FA8E00475A0D /* QQ20140424-5@2x.png in Resources */,
-				27A3FE7F19176B4A00D0312B /* WeekSignin.xib in Resources */,
 				2751E5A8190A085E00499EE3 /* QQ20140424-6@2x.png in Resources */,
 				273E207C190903E800475A0D /* myBaby.xib in Resources */,
 			);
