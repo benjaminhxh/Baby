@@ -7,9 +7,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HiHuViewController">
             <connections>
+                <outlet property="signBaby" destination="8SV-Ss-ejX" id="Amg-zo-BCj"/>
+                <outlet property="signOrNot" destination="wZH-vp-1tJ" id="Ogr-Ob-78j"/>
+                <outlet property="signTime" destination="neQ-Vb-wKz" id="Na4-vs-Ebj"/>
                 <outlet property="teacherName" destination="gj9-Z3-knk" id="HWP-Hx-oQC"/>
                 <outlet property="telephoneNumber" destination="F1R-mm-GNK" id="shE-42-COc"/>
                 <outlet property="titleName" destination="iNk-RF-vlB" id="sCx-DL-xgd"/>
+                <outlet property="weekDay" destination="xam-rt-HyP" id="e7P-lK-HkM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
