@@ -107,7 +107,7 @@
     imageSignView.image = [UIImage imageNamed:@"signin"];
     [pulldownView addSubview:imageSignView];
     
-    UITableView *signinView = [[UITableView alloc] initWithFrame:CGRectMake(30, 200, 260, 210) style:UITableViewStylePlain];
+    UITableView *signinView = [[UITableView alloc] initWithFrame:CGRectMake(30, 205, 260, 210) style:UITableViewStylePlain];
     signinView.delegate = self;
     signinView.dataSource = self;
     signinView.allowsSelection = NO;
