@@ -7,9 +7,12 @@
 //
 
 #import "PreVideoViewController.h"
-#import "PlayVideoViewController.h"
+//#import "PlayVideoViewController.h"
+#import "MVViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface PreVideoViewController ()
+@interface PreVideoViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -66,6 +69,16 @@
     [playBtn addTarget:self action:@selector(playClickAction) forControlEvents:UIControlEventTouchUpInside];
     [videoPreView addSubview:playBtn];
     
+    UIButton *MusicplayBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    MusicplayBtn.frame = CGRectMake(130, 130, 40, 40);
+    [MusicplayBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+    [MusicplayBtn addTarget:self action:@selector(MusicplayBtnClickAction) forControlEvents:UIControlEventTouchUpInside];
+//    [videoPreView addSubview:MusicplayBtn];
+    
+    UITableView *videoTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 280, kWidth, kHeight-280) style:UITableViewStylePlain];
+    videoTableView.delegate = self;
+    videoTableView.dataSource = self;
+    [self.view addSubview:videoTableView];
 }
 
 -(void)leftItemClick{
@@ -75,8 +88,44 @@
 - (void)playClickAction
 {
     NSLog(@"进入播放界面");
-    PlayVideoViewController *playerVC = [[PlayVideoViewController alloc] init];
-    [[SliderViewController sharedSliderController].navigationController pushViewController:playerVC animated:YES];
+//    PlayVideoViewController *playerVC = [[PlayVideoViewController alloc] init];
+//    [[SliderViewController sharedSliderController].navigationController pushViewController:playerVC animated:YES];
+    NSURL *url = [NSURL URLWithString:@"http://119.188.2.50/data2/video04/2013/04/27/00ab3b24-74de-432b-b703-a46820c9cd6f.mp4"];
+    MPMoviePlayerViewController *playC = [[MVViewController alloc] initWithContentURL:url];
+    //    playC.view.frame = CGRectMake(0, 20, 20, 40);
+    [[SliderViewController sharedSliderController] presentMoviePlayerViewControllerAnimated:playC];
+}
+
+- (void)MusicplayBtnClickAction
+{
+    
+}
+
+#pragma mark - tableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdent = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"videoListCell" owner:self options:nil] lastObject];
+    }
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 45;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"index.row:%d",indexPath.row);
+    [self playClickAction];
 }
 
 - (void)didReceiveMemoryWarning

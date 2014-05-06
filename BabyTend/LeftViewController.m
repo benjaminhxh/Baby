@@ -54,7 +54,7 @@
     tableV.dataSource=self;
     [self.view addSubview:tableV];
     
-    UIButton *helpBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *helpBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     helpBtn.frame = CGRectMake(20, kHeight-60, 80, 40);
 //    helpBtn.backgroundColor = [UIColor blueColor];
 //    [helpBtn setBackgroundImage:[UIImage imageNamed:@"dingshi_h@2x"] forState:UIControlStateNormal];
@@ -63,7 +63,7 @@
     [helpBtn addTarget:self action:@selector(helpClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:helpBtn];
     
-    UIButton *setBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *setBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     setBtn.frame = CGRectMake(120, kHeight-60, 80, 40);
 //    [setBtn setBackgroundImage:[UIImage imageNamed:@"yejian_h@2x"] forState:UIControlStateNormal];
     [setBtn setTitle:@"设置" forState:UIControlStateNormal];

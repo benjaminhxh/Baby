@@ -41,6 +41,7 @@
 		2746C5011918920700253F2B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2746C5001918920700253F2B /* AVFoundation.framework */; };
 		2746C5031918941100253F2B /* wwmxd.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2746C5021918941100253F2B /* wwmxd.mp4 */; };
 		2746C506191895CA00253F2B /* MVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2746C505191895CA00253F2B /* MVViewController.m */; };
+		2746C5081918E4A500253F2B /* videoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2746C5071918E4A500253F2B /* videoListCell.xib */; };
 		274ED253191626F700BA5235 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274ED251191626F700BA5235 /* play@2x.png */; };
 		274ED254191626F700BA5235 /* preView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274ED252191626F700BA5235 /* preView@2x.png */; };
 		2751E5A31909F43700499EE3 /* QQ20140425-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751E59F1909F43700499EE3 /* QQ20140425-1@2x.png */; };
@@ -129,6 +130,7 @@
 		2746C5021918941100253F2B /* wwmxd.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = wwmxd.mp4; sourceTree = "<group>"; };
 		2746C504191895CA00253F2B /* MVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVViewController.h; sourceTree = "<group>"; };
 		2746C505191895CA00253F2B /* MVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVViewController.m; sourceTree = "<group>"; };
+		2746C5071918E4A500253F2B /* videoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = videoListCell.xib; sourceTree = "<group>"; };
 		274ED251191626F700BA5235 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		274ED252191626F700BA5235 /* preView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preView@2x.png"; sourceTree = "<group>"; };
 		2751E59F1909F43700499EE3 /* QQ20140425-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "QQ20140425-1@2x.png"; path = "BabyTend/QQ20140425-1@2x.png"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				273E207B190903E800475A0D /* myBaby.xib */,
 				273E20931909415E00475A0D /* telephoneCell.xib */,
 				2751E5BF190A4FB800499EE3 /* tribuneCell.xib */,
+				2746C5071918E4A500253F2B /* videoListCell.xib */,
 				273E20461908E60200475A0D /* Images.xcassets */,
 				273E20321908E60200475A0D /* Supporting Files */,
 			);
@@ -416,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				273E20421908E60200475A0D /* Main_iPad.storyboard in Resources */,
+				2746C5081918E4A500253F2B /* videoListCell.xib in Resources */,
 				2751E5B6190A0D0D00499EE3 /* call@2x.png in Resources */,
 				273E20471908E60200475A0D /* Images.xcassets in Resources */,
 				2751E5A61909F43700499EE3 /* QQ20140425-4@2x.png in Resources */,

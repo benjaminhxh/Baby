@@ -66,6 +66,7 @@
 //    playerVC.view.frame = CGRectMake(0, 20, 320, 460);
 //    [playerVC prepareToPlay];
 //    [playerVC play];
+//    NSURL *url = [NSURL URLWithString:@"http://119.188.2.50/data2/video04/2013/04/27/00ab3b24-74de-432b-b703-a46820c9cd6f.mp4"];
     MPMoviePlayerViewController *playC = [[MVViewController alloc] initWithContentURL:url];
 //    playC.view.frame = CGRectMake(0, 20, 20, 40);
     [self presentMoviePlayerViewControllerAnimated:playC];

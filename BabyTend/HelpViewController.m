@@ -41,11 +41,13 @@
     if (iOS7) {
         topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 44+20)];
         backtBtn.frame = CGRectMake(5, 10+20, 34, 24);
+        self.titleL = [[UILabel alloc] initWithFrame:CGRectMake(100, 10+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 24)];
 
     }else
     {
         topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 44)];
         backtBtn.frame = CGRectMake(5, 10, 34, 24);
+        self.titleL = [[UILabel alloc] initWithFrame:CGRectMake(100, 10, 120, 24)];
 
     }
     topView.image = image;
@@ -60,7 +62,6 @@
     [backtBtn addTarget:self action:@selector(backtBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview:backtBtn];
     
-    self.titleL = [[UILabel alloc] initWithFrame:CGRectMake(100, 10+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 24)];
     self.titleL.backgroundColor = [UIColor clearColor];
     self.titleL.textColor = [UIColor whiteColor];
     self.titleL.text = @"育儿论坛";
