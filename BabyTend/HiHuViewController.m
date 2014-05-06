@@ -19,6 +19,7 @@
     NSArray *telephoneNumberArr;
     UIView *pulldownView;
     BOOL hidden;
+    UISwipeGestureRecognizer *swipUp;
 }
 @end
 
@@ -114,8 +115,13 @@
     signinView.scrollEnabled = NO;
     [pulldownView addSubview:signinView];
     
-//    UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];
-//    [pulldownView addGestureRecognizer:panGest];
+//    UIView *fakeView = [[UIView alloc] initWithFrame:pulldownView.frame];
+//    fakeView.backgroundColor = [UIColor blueColor];
+//    [pulldownView addSubview:fakeView];
+    
+    swipUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(pullOrDownView)];
+    swipUp.direction = UISwipeGestureRecognizerDirectionUp|UISwipeGestureRecognizerDirectionDown;
+    [pulldownView addGestureRecognizer:swipUp];
 
 }
 
@@ -210,23 +216,22 @@
     }
 }
 
-- (void)didTap:(UIPanGestureRecognizer *)sender
-{
-    NSLog(@"---------");
-    CGPoint point = [sender translationInView:pulldownView];
-    NSLog(@"point.y:%f",point.y);
-    if (point.y >=(kHeight/2)) {
-//        pulldownView.frame = CGRectMake(0, point.y, 320, kHeight);
-        pulldownView.center = CGPointMake(160, kHeight/2);
-    }else
-    {
-        pulldownView.frame = CGRectMake(0, 300, 320, kHeight);
-
-    }
-}
+//- (void)didSwip:(UISwipeGestureRecognizer *)sender
+//{
+//    NSLog(@"---------");
+////    CGPoint point = [sender translationInView:pulldownView];
+////        pulldownView.frame = CGRectMake(0, point.y, 320, kHeight);
+//        pulldownView.center = CGPointMake(160, kHeight/2);
+//    }else
+//    {
+//        pulldownView.frame = CGRectMake(0, 300, 320, kHeight);
+//
+//    }
+//}
 
 - (void)pullOrDownView
 {
+    NSLog(@"================");
     if (hidden) {
         [UIView animateWithDuration:0.3 animations:^{
             pulldownView.frame = CGRectMake(0, 300, kWidth, kHeight);

@@ -10,7 +10,7 @@
 #import "SliderViewController.h"
 #import "RightViewController.h"
 #import "HiHuViewController.h"
-#import "VideoViewController.h"
+#import "PreVideoViewController.h"
 #import "PictureViewController.h"
 #import "InstituteViewController.h"
 #import "TribuneViewController.h"
@@ -147,7 +147,7 @@
              [[SliderViewController sharedSliderController] showContentControllerWithModel:@"HiHuViewController"];
                 break;
             case 1://放心视频VideoViewController.h
-                [[SliderViewController sharedSliderController] showContentControllerWithModel:@"VideoViewController"];
+                [[SliderViewController sharedSliderController] showContentControllerWithModel:@"PreVideoViewController"];
                 break;
             case 2://宝贝倩影
                [[SliderViewController sharedSliderController] showContentControllerWithModel:@"PictureViewController"];

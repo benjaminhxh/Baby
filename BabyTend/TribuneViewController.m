@@ -7,6 +7,7 @@
 //
 
 #import "TribuneViewController.h"
+#import "ArticleViewController.h"
 
 @interface TribuneViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -120,7 +121,8 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    ArticleViewController *articVC = [[ArticleViewController alloc] init];
+    [[SliderViewController sharedSliderController].navigationController pushViewController:articVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

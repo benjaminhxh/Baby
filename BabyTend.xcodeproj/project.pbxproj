@@ -32,11 +32,15 @@
 		273E20781908FA8E00475A0D /* QQ20140424-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E20721908FA8E00475A0D /* QQ20140424-4@2x.png */; };
 		273E20791908FA8E00475A0D /* QQ20140424-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E20731908FA8E00475A0D /* QQ20140424-5@2x.png */; };
 		273E207C190903E800475A0D /* myBaby.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273E207B190903E800475A0D /* myBaby.xib */; };
-		273E207F1909111400475A0D /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E207E1909111400475A0D /* VideoViewController.m */; };
 		273E20821909112A00475A0D /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E20811909112A00475A0D /* PictureViewController.m */; };
 		273E20881909124900475A0D /* TribuneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E20871909124900475A0D /* TribuneViewController.m */; };
 		273E208E190916D800475A0D /* InstituteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273E208D190916D800475A0D /* InstituteViewController.m */; };
 		273E20941909415E00475A0D /* telephoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273E20931909415E00475A0D /* telephoneCell.xib */; };
+		2746C4FC1918740C00253F2B /* PreVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2746C4FB1918740C00253F2B /* PreVideoViewController.m */; };
+		2746C4FF1918751100253F2B /* PlayVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2746C4FE1918751100253F2B /* PlayVideoViewController.m */; };
+		2746C5011918920700253F2B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2746C5001918920700253F2B /* AVFoundation.framework */; };
+		2746C5031918941100253F2B /* wwmxd.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2746C5021918941100253F2B /* wwmxd.mp4 */; };
+		2746C506191895CA00253F2B /* MVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2746C505191895CA00253F2B /* MVViewController.m */; };
 		274ED253191626F700BA5235 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274ED251191626F700BA5235 /* play@2x.png */; };
 		274ED254191626F700BA5235 /* preView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274ED252191626F700BA5235 /* preView@2x.png */; };
 		2751E5A31909F43700499EE3 /* QQ20140425-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751E59F1909F43700499EE3 /* QQ20140425-1@2x.png */; };
@@ -53,10 +57,8 @@
 		2751E5C0190A4FB800499EE3 /* tribuneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2751E5BF190A4FB800499EE3 /* tribuneCell.xib */; };
 		2751E5C2190A509800499EE3 /* QQ20140425-12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751E5C1190A509800499EE3 /* QQ20140425-12@2x.png */; };
 		2751E5C4190A536800499EE3 /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751E5C3190A536800499EE3 /* button@2x.png */; };
-		2751E5C7190A722800499EE3 /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2751E5C6190A722800499EE3 /* CollectViewController.m */; };
-		2751E5CC190A7CD100499EE3 /* HiHuColleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2751E5CB190A7CD100499EE3 /* HiHuColleView.m */; };
-		2751E5CE190A7CEA00499EE3 /* HiHuColleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2751E5CD190A7CEA00499EE3 /* HiHuColleView.xib */; };
 		27A3FE811917861B00D0312B /* signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A3FE801917861B00D0312B /* signin@2x.png */; };
+		27A3FE841917948700D0312B /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FE831917948700D0312B /* ArticleViewController.m */; };
 		27D23E1D1910DC920077AAC8 /* DetailPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23E1C1910DC920077AAC8 /* DetailPictureViewController.m */; };
 		27D23E221910F0E50077AAC8 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23E211910F0E50077AAC8 /* iCarousel.m */; };
 		27FFC78D190E3A5300A47C42 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FFC78C190E3A5300A47C42 /* HelpViewController.m */; };
@@ -112,8 +114,6 @@
 		273E20721908FA8E00475A0D /* QQ20140424-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "QQ20140424-4@2x.png"; path = "BabyTend/QQ20140424-4@2x.png"; sourceTree = "<group>"; };
 		273E20731908FA8E00475A0D /* QQ20140424-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "QQ20140424-5@2x.png"; path = "BabyTend/QQ20140424-5@2x.png"; sourceTree = "<group>"; };
 		273E207B190903E800475A0D /* myBaby.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myBaby.xib; sourceTree = "<group>"; };
-		273E207D1909111400475A0D /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
-		273E207E1909111400475A0D /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		273E20801909112A00475A0D /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
 		273E20811909112A00475A0D /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
 		273E20861909124900475A0D /* TribuneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TribuneViewController.h; sourceTree = "<group>"; };
@@ -121,6 +121,14 @@
 		273E208C190916D800475A0D /* InstituteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstituteViewController.h; sourceTree = "<group>"; };
 		273E208D190916D800475A0D /* InstituteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstituteViewController.m; sourceTree = "<group>"; };
 		273E20931909415E00475A0D /* telephoneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = telephoneCell.xib; sourceTree = "<group>"; };
+		2746C4FA1918740C00253F2B /* PreVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreVideoViewController.h; sourceTree = "<group>"; };
+		2746C4FB1918740C00253F2B /* PreVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreVideoViewController.m; sourceTree = "<group>"; };
+		2746C4FD1918751100253F2B /* PlayVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayVideoViewController.h; sourceTree = "<group>"; };
+		2746C4FE1918751100253F2B /* PlayVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayVideoViewController.m; sourceTree = "<group>"; };
+		2746C5001918920700253F2B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2746C5021918941100253F2B /* wwmxd.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = wwmxd.mp4; sourceTree = "<group>"; };
+		2746C504191895CA00253F2B /* MVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVViewController.h; sourceTree = "<group>"; };
+		2746C505191895CA00253F2B /* MVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVViewController.m; sourceTree = "<group>"; };
 		274ED251191626F700BA5235 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		274ED252191626F700BA5235 /* preView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preView@2x.png"; sourceTree = "<group>"; };
 		2751E59F1909F43700499EE3 /* QQ20140425-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "QQ20140425-1@2x.png"; path = "BabyTend/QQ20140425-1@2x.png"; sourceTree = "<group>"; };
@@ -137,12 +145,9 @@
 		2751E5BF190A4FB800499EE3 /* tribuneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tribuneCell.xib; sourceTree = "<group>"; };
 		2751E5C1190A509800499EE3 /* QQ20140425-12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "QQ20140425-12@2x.png"; path = "BabyTend/QQ20140425-12@2x.png"; sourceTree = "<group>"; };
 		2751E5C3190A536800499EE3 /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button@2x.png"; path = "BabyTend/button@2x.png"; sourceTree = "<group>"; };
-		2751E5C5190A722800499EE3 /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
-		2751E5C6190A722800499EE3 /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
-		2751E5CA190A7CD100499EE3 /* HiHuColleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiHuColleView.h; sourceTree = "<group>"; };
-		2751E5CB190A7CD100499EE3 /* HiHuColleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HiHuColleView.m; sourceTree = "<group>"; };
-		2751E5CD190A7CEA00499EE3 /* HiHuColleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HiHuColleView.xib; sourceTree = "<group>"; };
 		27A3FE801917861B00D0312B /* signin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin@2x.png"; sourceTree = "<group>"; };
+		27A3FE821917948700D0312B /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		27A3FE831917948700D0312B /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 		27D23E1B1910DC920077AAC8 /* DetailPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPictureViewController.h; sourceTree = "<group>"; };
 		27D23E1C1910DC920077AAC8 /* DetailPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPictureViewController.m; sourceTree = "<group>"; };
 		27D23E201910F0E50077AAC8 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -163,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2746C5011918920700253F2B /* AVFoundation.framework in Frameworks */,
 				273E202E1908E60100475A0D /* CoreGraphics.framework in Frameworks */,
 				273E20301908E60200475A0D /* UIKit.framework in Frameworks */,
 				273E202C1908E60100475A0D /* Foundation.framework in Frameworks */,
@@ -206,6 +212,7 @@
 		273E202A1908E60100475A0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2746C5001918920700253F2B /* AVFoundation.framework */,
 				273E202B1908E60100475A0D /* Foundation.framework */,
 				273E202D1908E60100475A0D /* CoreGraphics.framework */,
 				273E202F1908E60200475A0D /* UIKit.framework */,
@@ -223,13 +230,12 @@
 				273E20401908E60200475A0D /* Main_iPad.storyboard */,
 				273E20431908E60200475A0D /* HiHuViewController.h */,
 				273E20441908E60200475A0D /* HiHuViewController.m */,
-				273E207D1909111400475A0D /* VideoViewController.h */,
-				273E207E1909111400475A0D /* VideoViewController.m */,
-				2751E5C5190A722800499EE3 /* CollectViewController.h */,
-				2751E5C6190A722800499EE3 /* CollectViewController.m */,
-				2751E5CA190A7CD100499EE3 /* HiHuColleView.h */,
-				2751E5CB190A7CD100499EE3 /* HiHuColleView.m */,
-				2751E5CD190A7CEA00499EE3 /* HiHuColleView.xib */,
+				2746C4FA1918740C00253F2B /* PreVideoViewController.h */,
+				2746C4FB1918740C00253F2B /* PreVideoViewController.m */,
+				2746C4FD1918751100253F2B /* PlayVideoViewController.h */,
+				2746C4FE1918751100253F2B /* PlayVideoViewController.m */,
+				2746C504191895CA00253F2B /* MVViewController.h */,
+				2746C505191895CA00253F2B /* MVViewController.m */,
 				273E20801909112A00475A0D /* PictureViewController.h */,
 				273E20811909112A00475A0D /* PictureViewController.m */,
 				27D23E1B1910DC920077AAC8 /* DetailPictureViewController.h */,
@@ -238,6 +244,8 @@
 				273E208D190916D800475A0D /* InstituteViewController.m */,
 				273E20861909124900475A0D /* TribuneViewController.h */,
 				273E20871909124900475A0D /* TribuneViewController.m */,
+				27A3FE821917948700D0312B /* ArticleViewController.h */,
+				27A3FE831917948700D0312B /* ArticleViewController.m */,
 				273E206A1908E6D700475A0D /* SliderViewController.h */,
 				273E206B1908E6D700475A0D /* SliderViewController.m */,
 				273E20631908E6C200475A0D /* LeftViewController.h */,
@@ -291,6 +299,7 @@
 		27C30EC6190F49940006B771 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				2746C5021918941100253F2B /* wwmxd.mp4 */,
 				27FFC79E190E656D00A47C42 /* baby@2x.png */,
 				27FFC796190E63A500A47C42 /* gold.png */,
 				27FFC797190E63A500A47C42 /* kejianxiuxi.png */,
@@ -418,7 +427,6 @@
 				274ED253191626F700BA5235 /* play@2x.png in Resources */,
 				273E20771908FA8E00475A0D /* QQ20140424-3@2x.png in Resources */,
 				273E206E1908ECA400475A0D /* sliderCell.xib in Resources */,
-				2751E5CE190A7CEA00499EE3 /* HiHuColleView.xib in Resources */,
 				27FFC78F190E583F00A47C42 /* collectCell.xib in Resources */,
 				2751E5AF190A0A1900499EE3 /* QQ20140425-5@2x.png in Resources */,
 				273E20751908FA8E00475A0D /* QQ20140424-1@2x.png in Resources */,
@@ -426,6 +434,7 @@
 				2751E5BE190A499000499EE3 /* topbar@2x.png in Resources */,
 				2751E5B8190A161B00499EE3 /* yejian_h@2x.png in Resources */,
 				273E20941909415E00475A0D /* telephoneCell.xib in Resources */,
+				2746C5031918941100253F2B /* wwmxd.mp4 in Resources */,
 				274ED254191626F700BA5235 /* preView@2x.png in Resources */,
 				2751E5A41909F43700499EE3 /* QQ20140425-2@2x.png in Resources */,
 				2751E5C2190A509800499EE3 /* QQ20140425-12@2x.png in Resources */,
@@ -462,16 +471,17 @@
 				273E20691908E6C200475A0D /* RightViewController.m in Sources */,
 				273E206C1908E6D700475A0D /* SliderViewController.m in Sources */,
 				27FFC795190E59B800A47C42 /* collectCell.m in Sources */,
+				2746C506191895CA00253F2B /* MVViewController.m in Sources */,
 				273E208E190916D800475A0D /* InstituteViewController.m in Sources */,
 				273E203C1908E60200475A0D /* HiHuAppDelegate.m in Sources */,
 				273E20681908E6C200475A0D /* LeftViewController.m in Sources */,
 				27D23E1D1910DC920077AAC8 /* DetailPictureViewController.m in Sources */,
-				273E207F1909111400475A0D /* VideoViewController.m in Sources */,
-				2751E5CC190A7CD100499EE3 /* HiHuColleView.m in Sources */,
+				2746C4FF1918751100253F2B /* PlayVideoViewController.m in Sources */,
+				2746C4FC1918740C00253F2B /* PreVideoViewController.m in Sources */,
+				27A3FE841917948700D0312B /* ArticleViewController.m in Sources */,
 				273E20821909112A00475A0D /* PictureViewController.m in Sources */,
 				273E20451908E60200475A0D /* HiHuViewController.m in Sources */,
 				27FFC78D190E3A5300A47C42 /* HelpViewController.m in Sources */,
-				2751E5C7190A722800499EE3 /* CollectViewController.m in Sources */,
 				27D23E221910F0E50077AAC8 /* iCarousel.m in Sources */,
 				273E20881909124900475A0D /* TribuneViewController.m in Sources */,
 				273E20381908E60200475A0D /* main.m in Sources */,
