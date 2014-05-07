@@ -33,7 +33,6 @@
     image = [image resizableImageWithCapInsets:inset resizingMode:UIImageResizingModeStretch];
     
     UIImageView *topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 44+[UIApplication sharedApplication].statusBarFrame.size.height)];
-    NSLog(@"[UIApplication sharedApplication].statusBarFrame.size.height：%f",[UIApplication sharedApplication].statusBarFrame.size.height);
     topView.image = image;
     topView.userInteractionEnabled = YES;
     [self.view addSubview:topView];

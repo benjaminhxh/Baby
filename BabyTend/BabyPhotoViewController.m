@@ -11,7 +11,7 @@
 
 @interface BabyPhotoViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
-    UITableView *dynamicView;
+    UITableView *dynamicTableView;
     int indexRow;
 }
 
@@ -57,10 +57,10 @@
     self.titleLable.textAlignment = NSTextAlignmentCenter;
     [topView addSubview:self.titleLable];
 
-    dynamicView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight-64) style:UITableViewStylePlain];
-    dynamicView.delegate = self;
-    dynamicView.dataSource = self;
-    [self.view addSubview:dynamicView];
+    dynamicTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight-64) style:UITableViewStylePlain];
+    dynamicTableView.delegate = self;
+    dynamicTableView.dataSource = self;
+    [self.view addSubview:dynamicTableView];
     
 
 }
@@ -85,6 +85,7 @@
         btn.frame = CGRectMake(286, 150, 30, 15);
         [btn addTarget:self action:@selector(showOrHiddenReview:) forControlEvents:UIControlEventTouchUpInside];
         [btn setBackgroundColor:[UIColor redColor]];
+        [btn setTitle:@"……" forState:UIControlStateNormal];
         [cell addSubview:btn];
     }
     return cell;
@@ -97,6 +98,7 @@
     //else(视频)
     DetailPictureViewController *detailPVC = [[DetailPictureViewController alloc] init];
     [[SliderViewController sharedSliderController].navigationController pushViewController:detailPVC animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
@@ -115,8 +117,8 @@
     {
         cell = (UITableViewCell *)btn.superview;
     }
-    indexRow = [dynamicView indexPathForCell:cell].row;
-    NSLog(@"indexRow:%dz",indexRow);
+    indexRow = [dynamicTableView indexPathForCell:cell].row;
+    NSLog(@"indexRow:%d",indexRow);
 }
 
 - (void)didReceiveMemoryWarning
