@@ -91,6 +91,7 @@
 //    PlayVideoViewController *playerVC = [[PlayVideoViewController alloc] init];
 //    [[SliderViewController sharedSliderController].navigationController pushViewController:playerVC animated:YES];
     NSURL *url = [NSURL URLWithString:@"http://119.188.2.50/data2/video04/2013/04/27/00ab3b24-74de-432b-b703-a46820c9cd6f.mp4"];
+//    MPMoviePlayerController
     MPMoviePlayerViewController *playC = [[MVViewController alloc] initWithContentURL:url];
     //    playC.view.frame = CGRectMake(0, 20, 20, 40);
     [[SliderViewController sharedSliderController] presentMoviePlayerViewControllerAnimated:playC];
@@ -124,7 +125,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"index.row:%d",indexPath.row);
+//    NSLog(@"index.row:%d",indexPath.row);
     [self playClickAction];
 }
 

@@ -42,6 +42,9 @@
 		2746C5031918941100253F2B /* wwmxd.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2746C5021918941100253F2B /* wwmxd.mp4 */; };
 		2746C506191895CA00253F2B /* MVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2746C505191895CA00253F2B /* MVViewController.m */; };
 		2746C5081918E4A500253F2B /* videoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2746C5071918E4A500253F2B /* videoListCell.xib */; };
+		274713511919C9F0008952AE /* BabyPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274713501919C9F0008952AE /* BabyPhotoViewController.m */; };
+		274713531919CA4F008952AE /* dynamicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274713521919CA4F008952AE /* dynamicCell.xib */; };
+		274713591919CD89008952AE /* boy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274713581919CD89008952AE /* boy@2x.png */; };
 		274ED253191626F700BA5235 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274ED251191626F700BA5235 /* play@2x.png */; };
 		274ED254191626F700BA5235 /* preView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274ED252191626F700BA5235 /* preView@2x.png */; };
 		2751E5A31909F43700499EE3 /* QQ20140425-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751E59F1909F43700499EE3 /* QQ20140425-1@2x.png */; };
@@ -131,6 +134,10 @@
 		2746C504191895CA00253F2B /* MVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVViewController.h; sourceTree = "<group>"; };
 		2746C505191895CA00253F2B /* MVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVViewController.m; sourceTree = "<group>"; };
 		2746C5071918E4A500253F2B /* videoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = videoListCell.xib; sourceTree = "<group>"; };
+		2747134F1919C9F0008952AE /* BabyPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyPhotoViewController.h; sourceTree = "<group>"; };
+		274713501919C9F0008952AE /* BabyPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyPhotoViewController.m; sourceTree = "<group>"; };
+		274713521919CA4F008952AE /* dynamicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dynamicCell.xib; sourceTree = "<group>"; };
+		274713581919CD89008952AE /* boy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "boy@2x.png"; path = "BabyTend/boy@2x.png"; sourceTree = "<group>"; };
 		274ED251191626F700BA5235 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		274ED252191626F700BA5235 /* preView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preView@2x.png"; sourceTree = "<group>"; };
 		2751E59F1909F43700499EE3 /* QQ20140425-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "QQ20140425-1@2x.png"; path = "BabyTend/QQ20140425-1@2x.png"; sourceTree = "<group>"; };
@@ -238,6 +245,8 @@
 				2746C4FE1918751100253F2B /* PlayVideoViewController.m */,
 				2746C504191895CA00253F2B /* MVViewController.h */,
 				2746C505191895CA00253F2B /* MVViewController.m */,
+				2747134F1919C9F0008952AE /* BabyPhotoViewController.h */,
+				274713501919C9F0008952AE /* BabyPhotoViewController.m */,
 				273E20801909112A00475A0D /* PictureViewController.h */,
 				273E20811909112A00475A0D /* PictureViewController.m */,
 				27D23E1B1910DC920077AAC8 /* DetailPictureViewController.h */,
@@ -264,6 +273,7 @@
 				273E20931909415E00475A0D /* telephoneCell.xib */,
 				2751E5BF190A4FB800499EE3 /* tribuneCell.xib */,
 				2746C5071918E4A500253F2B /* videoListCell.xib */,
+				274713521919CA4F008952AE /* dynamicCell.xib */,
 				273E20461908E60200475A0D /* Images.xcassets */,
 				273E20321908E60200475A0D /* Supporting Files */,
 			);
@@ -319,6 +329,7 @@
 				2751E5A11909F43700499EE3 /* QQ20140425-3@2x.png */,
 				2751E5A21909F43700499EE3 /* QQ20140425-4@2x.png */,
 				2751E5AD190A0A1900499EE3 /* QQ20140425-5@2x.png */,
+				274713581919CD89008952AE /* boy@2x.png */,
 				2751E5B5190A0D0D00499EE3 /* call@2x.png */,
 				2751E5BD190A499000499EE3 /* topbar@2x.png */,
 				2751E5C1190A509800499EE3 /* QQ20140425-12@2x.png */,
@@ -423,6 +434,7 @@
 				2751E5B6190A0D0D00499EE3 /* call@2x.png in Resources */,
 				273E20471908E60200475A0D /* Images.xcassets in Resources */,
 				2751E5A61909F43700499EE3 /* QQ20140425-4@2x.png in Resources */,
+				274713591919CD89008952AE /* boy@2x.png in Resources */,
 				2751E5A31909F43700499EE3 /* QQ20140425-1@2x.png in Resources */,
 				273E20761908FA8E00475A0D /* QQ20140424-2@2x.png in Resources */,
 				27A3FE811917861B00D0312B /* signin@2x.png in Resources */,
@@ -452,6 +464,7 @@
 				2751E5B2190A0B1200499EE3 /* back@2x.png in Resources */,
 				2751E5C4190A536800499EE3 /* button@2x.png in Resources */,
 				273E20791908FA8E00475A0D /* QQ20140424-5@2x.png in Resources */,
+				274713531919CA4F008952AE /* dynamicCell.xib in Resources */,
 				2751E5A8190A085E00499EE3 /* QQ20140424-6@2x.png in Resources */,
 				273E207C190903E800475A0D /* myBaby.xib in Resources */,
 			);
@@ -481,6 +494,7 @@
 				273E20681908E6C200475A0D /* LeftViewController.m in Sources */,
 				27D23E1D1910DC920077AAC8 /* DetailPictureViewController.m in Sources */,
 				2746C4FF1918751100253F2B /* PlayVideoViewController.m in Sources */,
+				274713511919C9F0008952AE /* BabyPhotoViewController.m in Sources */,
 				2746C4FC1918740C00253F2B /* PreVideoViewController.m in Sources */,
 				27A3FE841917948700D0312B /* ArticleViewController.m in Sources */,
 				273E20821909112A00475A0D /* PictureViewController.m in Sources */,

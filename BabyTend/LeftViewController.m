@@ -15,6 +15,7 @@
 #import "InstituteViewController.h"
 #import "TribuneViewController.h"
 #import "HelpViewController.h"
+#import "BabyPhotoViewController.h"
 
 @interface LeftViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 {
@@ -150,7 +151,7 @@
                 [[SliderViewController sharedSliderController] showContentControllerWithModel:@"PreVideoViewController"];
                 break;
             case 2://宝贝倩影
-               [[SliderViewController sharedSliderController] showContentControllerWithModel:@"PictureViewController"];
+               [[SliderViewController sharedSliderController] showContentControllerWithModel:@"BabyPhotoViewController"];
                 break;
             case 3://育儿学院
                [[SliderViewController sharedSliderController] showContentControllerWithModel:@"InstituteViewController"];
