@@ -16,6 +16,7 @@
 #import "TribuneViewController.h"
 #import "HelpViewController.h"
 #import "BabyPhotoViewController.h"
+#import "SetViewController.h"
 
 @interface LeftViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 {
@@ -154,7 +155,7 @@
                [[SliderViewController sharedSliderController] showContentControllerWithModel:@"BabyPhotoViewController"];
                 break;
             case 3://育儿学院
-               [[SliderViewController sharedSliderController] showContentControllerWithModel:@"InstituteViewController"];
+               [[SliderViewController sharedSliderController] showContentControllerWithModel:@"PreVideoViewController"];
                 break;
             case 4://育儿论坛
 //            {
@@ -185,7 +186,8 @@
 
 - (void)setClick
 {
-    
+    SetViewController *setVC = [[SetViewController alloc] init];
+    [self presentViewController:setVC animated:YES completion:nil];
 }
 
 //裁剪头像

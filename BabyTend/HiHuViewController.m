@@ -7,9 +7,7 @@
 //
 
 #import "HiHuViewController.h"
-
-//#define kWidth [UIScreen mainScreen].bounds.size.width
-//#define kheight     [UIScreen mainScreen].bounds.size.height
+#import "MoveView.h"
 
 @interface HiHuViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 {
@@ -17,9 +15,11 @@
     UITableView *telephoneView;
     NSInteger x;
     NSArray *telephoneNumberArr;
-    UIView *pulldownView;
+    MoveView *pulldownView;
     BOOL hidden;
-    UISwipeGestureRecognizer *swipUp;
+    float p;
+//    CGRect floatRect,rectPullView;
+    CGPoint beginPoint;
 }
 @end
 
@@ -43,7 +43,6 @@
     //back
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.frame = CGRectMake(5, 10+[UIApplication sharedApplication].statusBarFrame.size.height, 34, 24);
-//    [leftBtn setTitle:@"返回" forState:UIControlStateNormal];
     [leftBtn setImage:[UIImage imageNamed:@"back@2x"] forState:UIControlStateNormal];
     [leftBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [leftBtn addTarget:self action:@selector(leftItemClick) forControlEvents:UIControlEventTouchUpInside];
@@ -68,59 +67,61 @@
     [self.view addSubview:telephoneView];
     
     //上下拉视图
-    pulldownView = [[UIView alloc] initWithFrame:CGRectMake(0, 300, kWidth, kHeight)];
+    pulldownView = [[MoveView alloc] initWithFrame:CGRectMake(0, 300, kWidth, kHeight)];
     pulldownView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:pulldownView];
+//    rectPullView = pulldownView.frame;
     
-    UIButton *tapBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    tapBtn.frame = CGRectMake(130, 5, 60, 30);
-    tapBtn.backgroundColor = [UIColor blueColor];
-    [tapBtn addTarget:self action:@selector(pullOrDownView) forControlEvents:UIControlEventTouchUpInside];
-    [pulldownView addSubview:tapBtn];
-    
-    //签到
-    self.signIn = [[UIButton alloc] initWithFrame:CGRectMake(20, 20+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 44)];
-    [self.signIn setBackgroundImage:[UIImage imageNamed:@"QQ20140425-1@2x"] forState:UIControlStateNormal];
-//    [self.signIn setTitle:@"已签到" forState:UIControlStateNormal];
-    self.signIn.enabled = NO;
-    [pulldownView addSubview:self.signIn];
-    //健康
-    self.health = [[UIButton alloc] initWithFrame:CGRectMake(180, 20+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 44)];
-    [self.health setBackgroundImage:[UIImage imageNamed:@"QQ20140425-2@2x"] forState:UIControlStateNormal];
-    //    [health setTitle:@"健康" forState:UIControlStateNormal];
-    self.health.enabled = NO;
-    [pulldownView addSubview:self.health];
-    //姓名
-    self.babyName = [[UIButton alloc] initWithFrame:CGRectMake(20, 80+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 44)];
-    [self.babyName setBackgroundImage:[UIImage imageNamed:@"QQ20140425-3@2x"] forState:UIControlStateNormal];
-    //    [babyName setTitle:@"zhangtiantian" forState:UIControlStateNormal];
-    self.babyName.enabled = NO;
-    [pulldownView addSubview:self.babyName];
-    //时间
-    self.timeLabel = [[UIButton alloc] initWithFrame:CGRectMake(180, 80+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 44)];
-    [self.timeLabel setBackgroundImage:[UIImage imageNamed:@"QQ20140425-4@2x"] forState:UIControlStateNormal];
-    //    [self.timeLabel setTitle:@"07:20" forState:UIControlStateNormal];
-    self.timeLabel.enabled = NO;
-    [pulldownView addSubview:self.timeLabel];
-    
-    UIImageView *imageSignView = [[UIImageView alloc] initWithFrame:CGRectMake(30, 160, 260, 40)];
-    imageSignView.image = [UIImage imageNamed:@"signin"];
-    [pulldownView addSubview:imageSignView];
-    
-    UITableView *signinView = [[UITableView alloc] initWithFrame:CGRectMake(30, 205, 260, 210) style:UITableViewStylePlain];
-    signinView.delegate = self;
-    signinView.dataSource = self;
-    signinView.allowsSelection = NO;
-    signinView.scrollEnabled = NO;
-    [pulldownView addSubview:signinView];
+//    UIButton *tapBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    tapBtn.frame = CGRectMake(130, 5, 60, 30);
+//    tapBtn.backgroundColor = [UIColor blueColor];
+////    [tapBtn addTarget:self action:@selector(pullOrDownView:) forControlEvents:UIControlEventTouchUpInside];
+//    [pulldownView addSubview:tapBtn];
+//    
+//    //签到
+//    self.signIn = [[UIButton alloc] initWithFrame:CGRectMake(20, 20+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 44)];
+//    [self.signIn setBackgroundImage:[UIImage imageNamed:@"QQ20140425-1@2x"] forState:UIControlStateNormal];
+////    [self.signIn setTitle:@"已签到" forState:UIControlStateNormal];
+//    self.signIn.enabled = NO;
+//    [pulldownView addSubview:self.signIn];
+//    //健康
+//    self.health = [[UIButton alloc] initWithFrame:CGRectMake(180, 20+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 44)];
+//    [self.health setBackgroundImage:[UIImage imageNamed:@"QQ20140425-2@2x"] forState:UIControlStateNormal];
+//    //    [health setTitle:@"健康" forState:UIControlStateNormal];
+//    self.health.enabled = NO;
+//    [pulldownView addSubview:self.health];
+//    //姓名
+//    self.babyName = [[UIButton alloc] initWithFrame:CGRectMake(20, 80+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 44)];
+//    [self.babyName setBackgroundImage:[UIImage imageNamed:@"QQ20140425-3@2x"] forState:UIControlStateNormal];
+//    //    [babyName setTitle:@"zhangtiantian" forState:UIControlStateNormal];
+//    self.babyName.enabled = NO;
+//    [pulldownView addSubview:self.babyName];
+//    //时间
+//    self.timeLabel = [[UIButton alloc] initWithFrame:CGRectMake(180, 80+[UIApplication sharedApplication].statusBarFrame.size.height, 120, 44)];
+//    [self.timeLabel setBackgroundImage:[UIImage imageNamed:@"QQ20140425-4@2x"] forState:UIControlStateNormal];
+//    //    [self.timeLabel setTitle:@"07:20" forState:UIControlStateNormal];
+//    self.timeLabel.enabled = NO;
+//    [pulldownView addSubview:self.timeLabel];
+//    
+//    UIImageView *imageSignView = [[UIImageView alloc] initWithFrame:CGRectMake(30, 160, 260, 40)];
+//    imageSignView.image = [UIImage imageNamed:@"signin"];
+//    [pulldownView addSubview:imageSignView];
+//    
+//    UITableView *signinView = [[UITableView alloc] initWithFrame:CGRectMake(30, 205, 260, 210) style:UITableViewStylePlain];
+//    signinView.delegate = self;
+//    signinView.dataSource = self;
+//    signinView.allowsSelection = NO;
+//    signinView.scrollEnabled = NO;
+//    [pulldownView addSubview:signinView];
     
 //    UIView *fakeView = [[UIView alloc] initWithFrame:pulldownView.frame];
 //    fakeView.backgroundColor = [UIColor blueColor];
 //    [pulldownView addSubview:fakeView];
-    
-    swipUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(pullOrDownView)];
-    swipUp.direction = UISwipeGestureRecognizerDirectionUp|UISwipeGestureRecognizerDirectionDown;
-    [pulldownView addGestureRecognizer:swipUp];
+//    UISwipeGestureRecognizer *swipUp;
+//    swipUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(pullOrDownView:)];
+//    swipUp.direction = UISwipeGestureRecognizerDirectionUp;
+//    swipUp.direction = UISwipeGestureRecognizerDirectionDown;
+//    [pulldownView addGestureRecognizer:swipUp];
 
 }
 
@@ -228,10 +229,10 @@
 //    }
 //}
 
-- (void)pullOrDownView
+- (void)pullOrDownView:(UISwipeGestureRecognizer *)swipe
 {
     NSLog(@"================");
-    if (hidden) {
+    if (swipe.direction == UISwipeGestureRecognizerDirectionDown) {
         [UIView animateWithDuration:0.3 animations:^{
             pulldownView.frame = CGRectMake(0, 300, kWidth, kHeight);
         }];
@@ -243,4 +244,47 @@
     }
     hidden = !hidden;
 }
+
+#pragma mark - touchMethod
+/*
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    beginPoint = [touch locationInView:pulldownView];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+//    CGPoint prePoint = [[touches anyObject] previousLocationInView:pulldownView];
+//    CGPoint currentPoint = [[touches anyObject] locationInView:pulldownView];
+//    p = currentPoint.y - prePoint.y;
+//    if (p>0&&pulldownView.frame.origin.y<200) {
+//        NSLog(@"在下滑");
+//        CGPoint location = CGPointMake(currentPoint.x, currentPoint.y-prePoint.y);
+//        pulldownView.frame = CGRectMake(0, pulldownView.frame.origin.y+location.y, pulldownView.frame.size.width, pulldownView.frame.size.height);
+//        floatRect = pulldownView.frame;
+//    }else if(p<0&&pulldownView.frame.origin.y>250){
+//        NSLog(@"在上滑");
+//        CGPoint location = CGPointMake(currentPoint.x, prePoint.y-currentPoint.y);
+//        pulldownView.frame = CGRectMake(0, pulldownView.frame.origin.y+location.y, pulldownView.frame.size.width, pulldownView.frame.size.height);
+//        floatRect = pulldownView.frame;
+//    }
+    UITouch *touch = [touches anyObject];
+    CGPoint nowPoint = [touch locationInView:pulldownView];
+    //    float offsetX = nowPoint.x - beginPoint.x;
+    float offsetY = nowPoint.y - beginPoint.y;
+    pulldownView.center = CGPointMake(pulldownView.center.x, pulldownView.center.y + offsetY);
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (pulldownView.center.y<200) {
+        pulldownView.center = CGPointMake(160, 20);
+    }else
+    {
+        pulldownView.center = CGPointMake(160, 500);
+    }
+
+}
+*/
 @end

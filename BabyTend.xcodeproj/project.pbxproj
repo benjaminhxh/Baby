@@ -45,6 +45,7 @@
 		274713511919C9F0008952AE /* BabyPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274713501919C9F0008952AE /* BabyPhotoViewController.m */; };
 		274713531919CA4F008952AE /* dynamicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274713521919CA4F008952AE /* dynamicCell.xib */; };
 		274713591919CD89008952AE /* boy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274713581919CD89008952AE /* boy@2x.png */; };
+		2747135C191A4ADD008952AE /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2747135B191A4ADD008952AE /* SetViewController.m */; };
 		274ED253191626F700BA5235 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274ED251191626F700BA5235 /* play@2x.png */; };
 		274ED254191626F700BA5235 /* preView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 274ED252191626F700BA5235 /* preView@2x.png */; };
 		2751E5A31909F43700499EE3 /* QQ20140425-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751E59F1909F43700499EE3 /* QQ20140425-1@2x.png */; };
@@ -63,6 +64,7 @@
 		2751E5C4190A536800499EE3 /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2751E5C3190A536800499EE3 /* button@2x.png */; };
 		27A3FE811917861B00D0312B /* signin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A3FE801917861B00D0312B /* signin@2x.png */; };
 		27A3FE841917948700D0312B /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A3FE831917948700D0312B /* ArticleViewController.m */; };
+		27BEB47F191B8AD200D0B6D6 /* MoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BEB47E191B8AD200D0B6D6 /* MoveView.m */; };
 		27D23E1D1910DC920077AAC8 /* DetailPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23E1C1910DC920077AAC8 /* DetailPictureViewController.m */; };
 		27D23E221910F0E50077AAC8 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D23E211910F0E50077AAC8 /* iCarousel.m */; };
 		27FFC78D190E3A5300A47C42 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FFC78C190E3A5300A47C42 /* HelpViewController.m */; };
@@ -138,6 +140,8 @@
 		274713501919C9F0008952AE /* BabyPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyPhotoViewController.m; sourceTree = "<group>"; };
 		274713521919CA4F008952AE /* dynamicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dynamicCell.xib; sourceTree = "<group>"; };
 		274713581919CD89008952AE /* boy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "boy@2x.png"; path = "BabyTend/boy@2x.png"; sourceTree = "<group>"; };
+		2747135A191A4ADD008952AE /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		2747135B191A4ADD008952AE /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		274ED251191626F700BA5235 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		274ED252191626F700BA5235 /* preView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preView@2x.png"; sourceTree = "<group>"; };
 		2751E59F1909F43700499EE3 /* QQ20140425-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "QQ20140425-1@2x.png"; path = "BabyTend/QQ20140425-1@2x.png"; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 		27A3FE801917861B00D0312B /* signin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin@2x.png"; sourceTree = "<group>"; };
 		27A3FE821917948700D0312B /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
 		27A3FE831917948700D0312B /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		27BEB47D191B8AD200D0B6D6 /* MoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveView.h; sourceTree = "<group>"; };
+		27BEB47E191B8AD200D0B6D6 /* MoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveView.m; sourceTree = "<group>"; };
 		27D23E1B1910DC920077AAC8 /* DetailPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPictureViewController.h; sourceTree = "<group>"; };
 		27D23E1C1910DC920077AAC8 /* DetailPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPictureViewController.m; sourceTree = "<group>"; };
 		27D23E201910F0E50077AAC8 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -239,6 +245,8 @@
 				273E20401908E60200475A0D /* Main_iPad.storyboard */,
 				273E20431908E60200475A0D /* HiHuViewController.h */,
 				273E20441908E60200475A0D /* HiHuViewController.m */,
+				27BEB47D191B8AD200D0B6D6 /* MoveView.h */,
+				27BEB47E191B8AD200D0B6D6 /* MoveView.m */,
 				2746C4FA1918740C00253F2B /* PreVideoViewController.h */,
 				2746C4FB1918740C00253F2B /* PreVideoViewController.m */,
 				2746C4FD1918751100253F2B /* PlayVideoViewController.h */,
@@ -265,6 +273,8 @@
 				273E20661908E6C200475A0D /* RightViewController.m */,
 				27FFC78B190E3A5300A47C42 /* HelpViewController.h */,
 				27FFC78C190E3A5300A47C42 /* HelpViewController.m */,
+				2747135A191A4ADD008952AE /* SetViewController.h */,
+				2747135B191A4ADD008952AE /* SetViewController.m */,
 				27FFC793190E59B800A47C42 /* collectCell.h */,
 				27FFC794190E59B800A47C42 /* collectCell.m */,
 				27FFC78E190E583F00A47C42 /* collectCell.xib */,
@@ -499,6 +509,8 @@
 				27A3FE841917948700D0312B /* ArticleViewController.m in Sources */,
 				273E20821909112A00475A0D /* PictureViewController.m in Sources */,
 				273E20451908E60200475A0D /* HiHuViewController.m in Sources */,
+				2747135C191A4ADD008952AE /* SetViewController.m in Sources */,
+				27BEB47F191B8AD200D0B6D6 /* MoveView.m in Sources */,
 				27FFC78D190E3A5300A47C42 /* HelpViewController.m in Sources */,
 				27D23E221910F0E50077AAC8 /* iCarousel.m in Sources */,
 				273E20881909124900475A0D /* TribuneViewController.m in Sources */,

@@ -12,7 +12,11 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface PreVideoViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface PreVideoViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+{
+    NSMutableArray *_contentArray;
+    NSArray *items;
+}
 
 @end
 
@@ -30,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _contentArray = [NSMutableArray arrayWithObjects:@"hello",@"java",@"iOS",@"c++",@"c",@"heihei", nil];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     UIImage *image = [UIImage imageNamed:@"topbar@2x"];
@@ -75,7 +80,21 @@
     [MusicplayBtn addTarget:self action:@selector(MusicplayBtnClickAction) forControlEvents:UIControlEventTouchUpInside];
 //    [videoPreView addSubview:MusicplayBtn];
     
-    UITableView *videoTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 280, kWidth, kHeight-280) style:UITableViewStylePlain];
+    UITextField *seachField = [[UITextField alloc] initWithFrame:CGRectMake(10, 280, kWidth-80, 30)];
+    seachField.borderStyle = UITextBorderStyleLine;
+    seachField.delegate = self;
+    seachField.placeholder = @"宝贝搜索";
+//    seachField.keyboardType = UIKeyboardTypeNumberPad;
+    [self.view addSubview:seachField];
+    
+    UIButton *seachBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    seachBtn.frame = CGRectMake(kWidth-60, 280, 50, 30);
+    seachBtn.backgroundColor = [UIColor blueColor];
+    [seachBtn setTitle:@"搜索" forState:UIControlStateNormal];
+    [seachBtn addTarget:self action:@selector(searchBarSearchButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:seachBtn];
+    
+    UITableView *videoTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 320, kWidth, kHeight-320) style:UITableViewStylePlain];
     videoTableView.delegate = self;
     videoTableView.dataSource = self;
     [self.view addSubview:videoTableView];
@@ -129,10 +148,65 @@
     [self playClickAction];
 }
 
+#pragma mark - UITextFiledDelegate
+- (void)updateDataWithString:(NSString*)string {
+    [_contentArray removeAllObjects];
+    if (!string || [string isEqualToString:@""]) {
+        [_contentArray addObjectsFromArray:self->items];
+    }else {
+        for (NSString *comStr in self->items) {
+            if (comStr.length >= string.length &&
+                [[[comStr substringToIndex:string.length] uppercaseString] isEqualToString:[string uppercaseString]]) {
+                [_contentArray addObject:comStr];
+                NSLog(@"_contentArray里的数据:%@",_contentArray);
+            }
+        }
+    }
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    return YES;
+    [textField resignFirstResponder];
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField {
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)            textField:(UITextField *)textField
+shouldChangeCharactersInRange:(NSRange)range
+            replacementString:(NSString *)string {
+    if (textField.text)
+//        [self updateDataWithString:[textField.text stringByReplacingCharactersInRange:range
+//                                                                           withString:string]];
+        ;
+    else
+//        [self updateDataWithString:string];
+        ;
+
+    return YES;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSLog(@"searchBar");
+    [self.view endEditing:YES];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 
 @end
