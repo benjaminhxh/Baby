@@ -13,6 +13,9 @@
 {
     UITableView *dynamicTableView;
     int indexRow;
+    UIView *zanView;
+    BOOL zanFlag;
+    UIButton *zanBtn,*commentBtn;
 }
 
 @end
@@ -61,8 +64,22 @@
     dynamicTableView.delegate = self;
     dynamicTableView.dataSource = self;
     [self.view addSubview:dynamicTableView];
+//    dynamicTableView.allowsSelection = NO;//不可点击
+    zanView = [[UIView alloc] initWithFrame:CGRectMake(100, 150, 180, 30)];
+    zanView.backgroundColor = [UIColor grayColor];
     
-
+    zanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    zanBtn.backgroundColor = [UIColor blueColor];
+    zanBtn.frame = CGRectMake(20, 5, 60, 20);
+    [zanBtn addTarget:self action:@selector(zanBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [zanView addSubview:zanBtn];
+    
+    commentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    commentBtn.frame = CGRectMake(100, 5, 60, 20);
+    commentBtn.backgroundColor = [UIColor blueColor];
+    [commentBtn addTarget:self action:@selector(commentBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [zanView addSubview:commentBtn];
+    
 }
 
 -(void)leftItemClick{
@@ -88,16 +105,19 @@
         [btn setTitle:@"……" forState:UIControlStateNormal];
         [cell addSubview:btn];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"indexpath.row:%d",indexPath.row);
+    [zanView removeFromSuperview];
+
     //if(图片)
     //else(视频)
     DetailPictureViewController *detailPVC = [[DetailPictureViewController alloc] init];
-    [[SliderViewController sharedSliderController].navigationController pushViewController:detailPVC animated:YES];
+//    [[SliderViewController sharedSliderController].navigationController pushViewController:detailPVC animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -119,6 +139,57 @@
     }
     indexRow = [dynamicTableView indexPathForCell:cell].row;
     NSLog(@"indexRow:%d",indexRow);
+    if (zanFlag) {
+        [zanView removeFromSuperview];
+    }else{
+        [cell addSubview:zanView];
+    }
+    zanFlag = !zanFlag;
+//    [UIView animateWithDuration:0.3 animations:^{
+//         zanView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+//        [cell addSubview:zanView];
+//        
+//    } completion:^(BOOL finished) {
+//        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+//    }];
+}
+
+//赞按钮
+- (void)zanBtnClick:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    UITableViewCell *cell;
+    if (iOS7) {
+        cell = (UITableViewCell *)btn.superview.superview.superview;
+    }else
+    {
+        cell = (UITableViewCell *)btn.superview.superview;
+    }
+    indexRow = [dynamicTableView indexPathForCell:cell].row;
+    NSLog(@"赞indexRow:%d",indexRow);
+}
+
+//评论按钮
+- (void)commentBtnClick:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    UITableViewCell *cell;
+    if (iOS7) {
+        cell = (UITableViewCell *)btn.superview.superview.superview;
+    }else
+    {
+        cell = (UITableViewCell *)btn.superview.superview;
+    }
+    indexRow = [dynamicTableView indexPathForCell:cell].row;
+    NSLog(@"评论indexRow:%d",indexRow);
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint point = [touch locationInView:dynamicTableView];
+    NSLog(@"point.x:%f,point.y:%f",point.x,point.y);
+    [zanView removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning

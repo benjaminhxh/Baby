@@ -155,7 +155,7 @@
                [[SliderViewController sharedSliderController] showContentControllerWithModel:@"BabyPhotoViewController"];
                 break;
             case 3://育儿学院
-               [[SliderViewController sharedSliderController] showContentControllerWithModel:@"PreVideoViewController"];
+               [[SliderViewController sharedSliderController] showContentControllerWithModel:@"InstituteViewController"];
                 break;
             case 4://育儿论坛
 //            {

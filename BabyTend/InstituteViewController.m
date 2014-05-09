@@ -7,9 +7,12 @@
 //
 
 #import "InstituteViewController.h"
+//#import "MoveView.h"
 
 @interface InstituteViewController ()
-
+{
+//    MoveView *moveView;
+}
 @end
 
 @implementation InstituteViewController
@@ -51,6 +54,10 @@
     self.titleLable.text = @"育儿学院";
     self.titleLable.textAlignment = NSTextAlignmentCenter;
     [topView addSubview:self.titleLable];
+    
+//    moveView = [[MoveView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+//    moveView.backgroundColor = [UIColor blueColor];
+//    [self.view addSubview:moveView];
 }
 
 -(void)backClick{

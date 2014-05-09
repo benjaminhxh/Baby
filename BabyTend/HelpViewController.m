@@ -13,7 +13,8 @@
 {
     NSArray *imageArr;
     MoveView *moveView;
-
+    UIView *zanView;
+    
 }
 @end
 
@@ -71,8 +72,26 @@
     moveView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:moveView];
     
+    UIButton *zanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    zanBtn.frame = CGRectMake(20, 40, 40, 20);
+    zanBtn.backgroundColor = [UIColor blueColor];
+    [zanBtn addTarget:self action:@selector(zanClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:zanBtn];
+    zanView = [[UIView alloc] initWithFrame:CGRectMake(220, 40, 100, 100)];
+    zanView.backgroundColor = [UIColor grayColor];
+
 }
 
+- (void)zanClick
+{
+    [UIView animateWithDuration:0.3 animations:^{
+//        zanView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        [self.view addSubview:zanView];
+
+    } completion:^(BOOL finished) {
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    }];
+}
 //- (void)pullOrDownView:(UISwipeGestureRecognizer *)swipe
 //{
 //    NSLog(@"================");
@@ -101,6 +120,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [zanView removeFromSuperview];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
