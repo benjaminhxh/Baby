@@ -68,7 +68,6 @@ static  NSString *cellIdentif = @"cell";
     layout.minimumLineSpacing = paddingY;
     
     UICollectionView *collectV = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, 320, kHeight-64)collectionViewLayout:layout];
-//    HiHuCollectionView *collectV = [[HiHuCollectionView alloc] initWithFrame:CGRectMake(0, 64, 320, kHeight-64)];
     collectV.backgroundColor = [UIColor grayColor];
     collectV.delegate = self;
     collectV.dataSource = self;
